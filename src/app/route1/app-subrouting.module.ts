@@ -2,9 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Subroute1Component } from './subroute1/subroute1.component';
 import { Subroute2Component } from './subroute2/subroute2.component';
+import { Route1Component } from './route1.component';
 
 
 const routes: Routes = [
+    {
+      path: '',
+      component: Route1Component,
+      pathMatch: 'full',
+    },
     { path: 'subroute1', component: Subroute1Component },
     { path: 'subroute2', component: Subroute2Component },
 ];
