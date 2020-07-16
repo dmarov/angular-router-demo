@@ -9,10 +9,11 @@ const routes: Routes = [
     {
       path: '',
       component: Route1Component,
-      pathMatch: 'full',
+      children: [
+        { path: 'subroute1', component: Subroute1Component },
+        { path: 'subroute2', component: Subroute2Component },
+      ]
     },
-    { path: 'subroute1', component: Subroute1Component },
-    { path: 'subroute2', component: Subroute2Component },
 ];
 
 @NgModule({
