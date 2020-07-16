@@ -10,6 +10,7 @@ const routes: Routes = [
       path: '',
       component: Route1Component,
       children: [
+        { path: '', pathMatch: 'full', redirectTo: 'subroute1' },
         { path: 'subroute1', component: Subroute1Component },
         { path: 'subroute2', component: Subroute2Component },
       ]
