@@ -6,7 +6,10 @@ import { AppSubroute1Module} from './route1/app-subroute1.module';
 
 
 const routes: Routes = [
-    { path: 'route1', component: Route1Component },
+    {
+        path: 'route1',
+        loadChildren: () => import('./route1/app-subroute1.module').then(m => m.AppSubroute1Module),
+    },
     { path: 'route2', component: Route2Component },
 ];
 
