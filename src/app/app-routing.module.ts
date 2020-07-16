@@ -8,9 +8,18 @@ import { AppSubroute1Module} from './route1/app-subroute1.module';
 const routes: Routes = [
     {
         path: 'route1',
+        data: {
+            breadcrumb: 'Route 1',
+        },
         loadChildren: () => import('./route1/app-subroute1.module').then(m => m.AppSubroute1Module),
     },
-    { path: 'route2', component: Route2Component },
+    {
+        path: 'route2',
+        component: Route2Component,
+        data: {
+            breadcrumb: 'Route 2',
+        },
+    },
 ];
 
 @NgModule({

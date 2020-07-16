@@ -1,3 +1,11 @@
+
+<ol class="breadcrumb">
+  <li *ngFor="let breadcrumb of breadcrumbs">
+    <span [routerLink]="breadcrumb.url" routerLinkActive="router-link-active">
+      {{ breadcrumb.label }}
+    </span>
+  </li>
+</ol>
 <nav>
     <a routerLink="/route1">Route1</a>
     <a routerLink="/route2">Route2</a>

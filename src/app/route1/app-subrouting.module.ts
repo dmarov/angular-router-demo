@@ -11,8 +11,16 @@ const routes: Routes = [
       component: Route1Component,
       children: [
         { path: '', pathMatch: 'full', redirectTo: 'subroute1' },
-        { path: 'subroute1', component: Subroute1Component },
-        { path: 'subroute2', component: Subroute2Component },
+        { path: 'subroute1', component: Subroute1Component,
+        data: {
+            breadcrumb: 'subRoute 1',
+        },
+        },
+        { path: 'subroute2', component: Subroute2Component,
+        data: {
+            breadcrumb: 'subRoute 2',
+        },
+        },
       ]
     },
 ];
